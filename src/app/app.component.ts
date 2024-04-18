@@ -9,6 +9,7 @@ import {
   PoPageModule,
   PoToolbarModule,
 } from '@po-ui/ng-components';
+import { HomeComponent } from './features/home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import {
     PoMenuModule,
     PoPageModule,
     HttpClientModule,
+    HomeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
