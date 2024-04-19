@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { PoPageModule } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [
+    PoPageModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
