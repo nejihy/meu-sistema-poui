@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 import {
   PoMenuItem,
@@ -29,9 +29,14 @@ import { ToolbarModule } from './core/toolbar/toolbar.module';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
+  constructor(
+    private router: Router
+  ) {}
+
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) },
-    { label: 'Cadastro',  },
+    { label: 'Home', action: () => this.router.navigate(['']) },
+    { label: 'Cadastro', action: () => this.router.navigate(['cadastros']) },
     { label: 'Consulta',  },
     { label: 'Sair', },
   ];
