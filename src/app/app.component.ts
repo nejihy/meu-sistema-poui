@@ -6,10 +6,11 @@ import { RouterOutlet } from '@angular/router';
 import {
   PoMenuItem,
   PoMenuModule,
-  PoPageModule,
   PoToolbarModule,
 } from '@po-ui/ng-components';
 import { HomeComponent } from './features/home/home.component';
+import { SharedModule } from './shared/shared.module';
+import { ToolbarModule } from './core/toolbar/toolbar.module';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { HomeComponent } from './features/home/home.component';
     RouterOutlet,
     PoToolbarModule,
     PoMenuModule,
-    PoPageModule,
+    SharedModule,
+    ToolbarModule,
     HttpClientModule,
     HomeComponent,
   ],
@@ -29,6 +31,9 @@ import { HomeComponent } from './features/home/home.component';
 export class AppComponent {
   readonly menus: Array<PoMenuItem> = [
     { label: 'Home', action: this.onClick.bind(this) },
+    { label: 'Cadastro',  },
+    { label: 'Consulta',  },
+    { label: 'Sair', },
   ];
 
   private onClick() {
