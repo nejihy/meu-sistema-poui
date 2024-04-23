@@ -1,3 +1,9 @@
-<po-page-default>
-  <p>Tela de Cadastros</p>
+<po-page-default
+    p-title="Cadastro"
+    [p-actions]="actions"
+    [p-breadcrumb]="breadcrumb">
+  <po-table
+      [p-columns]="columns"
+      [p-items]="cadastros.items">
+  </po-table>
 </po-page-default>
